@@ -1,0 +1,71 @@
+/* This file will help change the looks and format of the code from the index.html
+    and makes things look better  */
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body { /* deals with the background*/
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #fcfcfb, rgb(215, 184, 137), rgb(116, 78, 28));
+}
+
+.calculator-grid { /* you created this class in the index file. here you can modify it*/
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 75px);
+}
+
+.calculator-grid > button {/* this is where you modify the buttons*/
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgba(208, 177, 154, .9);
+    outline: rgba(28, 15, 1, 0.75);
+    background-color: rgba(209, 170, 112, 0.75); 
+    /* rgba(red, green, blue, transparency)*/
+}
+
+.calculator-grid > button:hover { /* this will show a color when you hover over a button*/
+    background-color: #dccaad;
+}
+
+.span-two { /* this is how you create the bigger button*/
+    grid-column: span 2;
+}
+
+.output { /* modifies the output of the calculation */
+    grid-column: 1 / -1;
+    background-color: rgba(118, 76, 31, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgb(242, 236, 236);
+    font-size: 2rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(106, 69, 13);
+
+}
